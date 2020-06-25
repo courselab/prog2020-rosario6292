@@ -33,8 +33,24 @@ int greatest(int a, int b, int c)
    else if (c > a && c > b){
      return c;
    }
-   else
-   return a;
+   else if (a == b && a > c){
+      return a;
+   }
+   else if (a == b && a < c){
+      return c;
+   }
+    else if (a == c && a > b){
+      return a;
+   }
+    else if (a == c && a < b){
+      return b;
+   }
+    else if (c == b && a > c){
+      return a;
+   }
+   else{
+     return c;
+   }
 }
 /* Do not edit this function. */
 
