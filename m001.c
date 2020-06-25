@@ -33,6 +33,8 @@ int greatest(int a, int b, int c)
    else if (c > a && c > b){
      return c;
    }
+   else
+   return a;
 }
 /* Do not edit this function. */
 

@@ -54,6 +54,26 @@ void sort (int *a, int* b, int* c)
               *a=*c;
               *c=t;
           }
+            else if(*a == *b && *a > *c){
+              t=*a;
+              *a=*c;
+              *c=t;
+            }
+              else if (*b == *c && *c < *a){
+                t=*a;
+                *a=*c;
+                *c=t;
+              }
+                 else if (*a == *c && *b < *a){
+                  t=*a;
+                  *a=*b;
+                  *b=t;
+                }
+                  else if (*a == *c && *a < *b){
+                    t=*b;
+                    *b=*c;
+                    *c=t;
+                  }
 }
 
 /* Do not edit this function. */
