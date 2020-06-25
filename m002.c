@@ -24,56 +24,54 @@
 #define USAGE "m002 <num1> <num2> <num3>\n"
 
 /* Sort three integers x, y, z in ascending order.*/
-void sort (int *a, int* b, int* c)
+void sort (int *a, int *b, int *c)
 {
-  int t;
-  if (*a < *b && *a < *c && *b > *c){
-    t=*b;
-    *b=*c;
-    *c=t;
-  }
-    else if (*b < *a && *b < *c && *a < *c){
-      t=*a;
-      *a=*b;
-      *b=t;
-    }
-      else if (*b < *a && *b < *c && *c < *a){
-        t=*a;
-        *a=*b;
-        *b=*c;
-        *c=t;
-      }
-        else if (*c < *a && *c < *b && *a < *b){
-          t=*c;
-          *c=*b;
-          *b=*a;
-          *a=t;
-        }
-          else if(*c < *a && *c < *b && *a > *b){
-              t=*a;
-              *a=*c;
-              *c=t;
-          }
-            else if(*a == *b && *a > *c){
-              t=*a;
-              *a=*c;
-              *c=t;
-            }
-              else if (*b == *c && *c < *a){
-                t=*a;
-                *a=*c;
-                *c=t;
-              }
-                 else if (*a == *c && *b < *a){
-                  t=*a;
-                  *a=*b;
-                  *b=t;
-                }
-                  else if (*a == *c && *a < *b){
-                    t=*b;
-                    *b=*c;
-                    *c=t;
-                  }
+ int g, m, p;
+ if(*a>=*b && *a>=*c)
+ {
+   g=*a;
+   if(*b>=*c){
+     m=*b;
+     p=*c;
+   }
+   if(*b<=*c){
+     m=*c;
+     p=*b; 
+   }
+   *a=p;
+   *b=m;
+   *c=g;
+ } 
+ if(*b>=*a && *b>=*c)
+ {
+   g=*b;
+   if(*a>=*c){
+      m=*a;
+      p=*c;
+   }
+   if(*a<=*c){
+      m=*c;
+      p=*a;
+   }
+    *a=p;
+    *b=m;
+    *c=g;
+ }
+ if(*c>=*a && *c>=*b)
+ {
+   g=*c;
+   if(*a>=*b){
+      m=*a;
+      p=*b;
+   }
+   if(*a<=*b){
+      m=*b;
+      p=*a;
+   }
+    *a=p;
+    *b=m;
+    *c=g;
+ }
 }
 
 /* Do not edit this function. */
