@@ -24,7 +24,7 @@
 #define USAGE "m002 <num1> <num2> <num3>\n"
 
 /* Sort three integers x, y, z in ascending order.*/
-void sort (int* a, int* b, int* c)
+void sort (int *a, int* b, int* c)
 {
   int t;
   if (*a < *b && *a < *c && *b > *c){
