@@ -30,7 +30,6 @@ int lettercount (char *s)
 {
   int n, i;
   n=strlen(s);
-  n= n-1;
   for(i=0; i<n; i++)
   {
     if(s[i] == ' '){
