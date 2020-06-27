@@ -44,11 +44,12 @@ void lastname (char *s)
   s[0]=t[x+1];
   
   for(i=x+2; t[i] != 0; i++){
-    s[y]=t[i]-32;
-    y++;
+    if(s[i]>='a' && s[i]<='z'){
+      s[y]=s[i]-32;
+      y++;
+    }
   }
   
-  y =y-1;
   s[y]=',';
   y =y+1;
   s[y] = ' ';
