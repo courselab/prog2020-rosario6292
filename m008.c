@@ -43,7 +43,7 @@ void lastname (char *s)
   
   s[0]=t[x+1];
   
-  for(i=x+2; t[i] != 0; i++){
+  for(i=x+1; t[i] != 0; i++){
     if(s[i]>='a' && s[i]<='z'){
       s[y]=s[i]-32;
       y++;
