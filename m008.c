@@ -31,7 +31,7 @@
 void lastname (char *s)
 {
   char t[MAX];
-  int i=0, x, y=1;
+  int i=0, x, y=0;
   int j;
   strcpy (t ,s);
 
