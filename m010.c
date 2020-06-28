@@ -170,6 +170,7 @@ if(month == 2 || month == 8 ){
       return 0;
     }
   }
+  return 0;
 }
 
 /* Do not edit function main. */

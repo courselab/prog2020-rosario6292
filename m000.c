@@ -29,12 +29,13 @@ int np (char c)
   if( (c >= 'a') && (c <= 'z')){
     n = (c-'a') % 9 + 1;
   }
-    else if( (c >= 'A') && (c <= 'Z')){
-    n = (c-'a'+32) % 9 + 1;
-   }
-    else{
-      n=0;
-    }
+    else 
+      if( (c >= 'A') && (c <= 'Z')){
+        n = (c-'a'+32) % 9 + 1;
+      }
+      else{
+        n=0;
+      }
   return n;
 }
 
