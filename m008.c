@@ -22,7 +22,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 #define MAX 256
 
 /* Converts the string 's' from first-middle-last name 
@@ -30,6 +30,37 @@
 
 void lastname (char *s)
 {
+  char t[MAX];
+  int i=0, x, y=0;
+  int j;
+  strcpy (t ,s);
+
+  for(i=0; t[i] != 0; i++){
+    if(t[i]==' ' || t[i]==' '){
+      x=i;
+    }
+  }
+  
+  s[0]=t[x+1];
+  
+  for(i=x+1; t[i] != 0; i++){
+    if(s[i]>='a' && s[i]<='z'){
+      s[y]=s[i]-32;
+      y++;
+    }
+  }
+  
+  s[y]=',';
+  y =y+1;
+  s[y] = ' ';
+  y= y+1;
+
+while(x>0){
+  s[y]=t[j];
+  y++;
+  j++;
+  x--;
+}
 }
 
 

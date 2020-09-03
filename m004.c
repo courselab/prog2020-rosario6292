@@ -20,7 +20,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <math.h>
 /* Return the value in decimal base of the string b, interpreted
    as the a positive binary number. If the string contains any
    characters other than '1's and '0's, truncate the string
@@ -29,10 +29,15 @@
 
 int decimal (char *b)
 {
-  
-  return 0;
+int n, i, v=0;
+int c=1;
+n = strlen(b);
+  for(i=n-1; i >= 0; i--){
+    v = v + (b[i]-'1'+1) * c;
+  c = c*2;
+  }
+  return v;
 }
-
 #define USAGE "m004 <string>\n"
 
 /* Do not edit this function. */

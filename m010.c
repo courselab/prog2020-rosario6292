@@ -30,7 +30,147 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+  int x;
+  x = day % 7;
+  if(month == 1 || month == 4 || month ==7){
+    if(x==0){
+      return 2;
+    }
+    if(x==1){
+      return 3;
+    }
+    if(x==2){
+      return 4;
+    }
+    if(x==3){
+      return 5;
+    }
+    if(x==4){
+      return 6;
+    }
+    if(x==5){
+      return 0;
+    }
+    if(x==6){
+      return 1;
+    }
+  }
+if(month == 2 || month == 8 ){
+    if(x==0){
+      return 5;
+    }
+    if(x==1){
+      return 6;
+    }
+    if(x==2){
+      return 0;
+    }
+    if(x==3){
+      return 1;
+    }
+    if(x==4){
+      return 2;
+    }
+    if(x==5){
+      return 3;
+    }
+    if(x==6){
+      return 4;
+    }
+  }
+  if(month == 3 || month == 11){
+    if(x==0){
+      return 6;
+    }
+    if(x==1){
+      return 0;
+    }
+    if(x==2){
+      return 1;
+    }
+    if(x==3){
+      return 2;
+    }
+    if(x==4){
+      return 3;
+    }
+    if(x==5){
+      return 4;
+    }
+    if(x==6){
+      return 5;
+    }
+  }
+  if(month == 5){
+    if(x==0){
+      return 4;
+    }
+    if(x==1){
+      return 5;
+    }
+    if(x==2){
+      return 6;
+    }
+    if(x==3){
+      return 0;
+    }
+    if(x==4){
+      return 1;
+    }
+    if(x==5){
+      return 2;
+    }
+    if(x==6){
+      return 3;
+    }
+  }
+  if(month == 6){
+    if(x==0){
+      return 0;
+    }
+    if(x==1){
+      return 1;
+    }
+    if(x==2){
+      return 2;
+    }
+    if(x==3){
+      return 3;
+    }
+    if(x==4){
+      return 4;
+    }
+    if(x==5){
+      return 5;
+    }
+    if(x==6){
+      return 6;
+    }
+  }
+  if(month == 9 || month == 12){
+    if(x==0){
+      return 1;
+    }
+    if(x==1){
+      return 2;
+    }
+    if(x==2){
+      return 3;
+    }
+    if(x==3){
+      return 4;
+    }
+    if(x==4){
+      return 5;
+    }
+    if(x==5){
+      return 6;
+    }
+    if(x==6){
+      return 0;
+    }
+  }
+  return 0;
 }
 
 /* Do not edit function main. */

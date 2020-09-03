@@ -24,9 +24,54 @@
 #define USAGE "m002 <num1> <num2> <num3>\n"
 
 /* Sort three integers x, y, z in ascending order.*/
-
 void sort (int *a, int *b, int *c)
 {
+ int g, m, p;
+ if(*a>=*b && *a>=*c)
+ {
+   g=*a;
+   if(*b>=*c){
+     m=*b;
+     p=*c;
+   }
+   if(*b<=*c){
+     m=*c;
+     p=*b; 
+   }
+   *a=p;
+   *b=m;
+   *c=g;
+ } 
+ if(*b>=*a && *b>=*c)
+ {
+   g=*b;
+   if(*a>=*c){
+      m=*a;
+      p=*c;
+   }
+   if(*a<=*c){
+      m=*c;
+      p=*a;
+   }
+    *a=p;
+    *b=m;
+    *c=g;
+ }
+ if(*c>=*a && *c>=*b)
+ {
+   g=*c;
+   if(*a>=*b){
+      m=*a;
+      p=*b;
+   }
+   if(*a<=*b){
+      m=*b;
+      p=*a;
+   }
+    *a=p;
+    *b=m;
+    *c=g;
+ }
 }
 
 /* Do not edit this function. */
